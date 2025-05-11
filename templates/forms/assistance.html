@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+
+{% block title %}Request Assistance{% endblock %}
+
+{% block content %}
+<h3 class="text-center text-success">Request Assistance</h3>
+<div id="form-alert" class="alert mt-3 d-none" role="alert"></div>
+<form id="assistance-form" class="needs-validation" novalidate>
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <label for="name" class="form-label">Name <span class="text-danger">(Required)</span></label>
+      <input type="text" class="form-control" id="name" name="name" required>
+    </div>
+    <div class="col-md-6">
+      <label for="email" class="form-label">Email <span class="text-danger">(Required)</span></label>
+      <input type="email" class="form-control" id="email" name="email" required>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="phone_number" class="form-label">Phone Number <span class="text-danger">(Required)</span></label>
+    <input type="text" class="form-control" id="phone_number" name="phone_number" placeholder="(555) 555-5555" required pattern="\(\d{3}\) \d{3}-\d{4}">
+  </div>
+
+  <div class="mb-3">
+    <label for="street_address" class="form-label">Street Address <span class="text-danger">(Required)</span></label>
+    <input type="text" class="form-control" id="street_address" name="street_address" required>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-4">
+      <label for="city" class="form-label">City <span class="text-danger">(Required)</span></label>
+      <input type="text" class="form-control" id="city" name="city" required>
+    </div>
+    <div class="col-md-4">
+      <label for="state" class="form-label">State <span class="text-danger">(Required)</span></label>
+      <input type="text" class="form-control" id="state" name="state" required>
+    </div>
+    <div class="col-md-4">
+      <label for="zip_code" class="form-label">Zip Code <span class="text-danger">(Required)</span></label>
+      <input type="text" class="form-control" id="zip_code" name="zip_code" required pattern="\d{5}(-\d{4})?">
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="type_of_assistance" class="form-label">Type of Assistance <span class="text-danger">(Required)</span></label>
+    <select class="form-select" id="type_of_assistance" name="type_of_assistance" required>
+        <option value="">Choose...</option>
+        <option value="Volunteer">Volunteer</option>
+        <option value="Monetary">Monetary</option>
+        <option value="Attend Event">Attend Event</option>
+        <option value="Escort">Escort</option>
+        <option value="Other">Other</option>
+    </select>
+    </div>
+
+  <div class="mb-3">
+    <label for="assistance_description" class="form-label">Assistance Description</label>
+    <textarea class="form-control" id="assistance_description" name="assistance_description" rows="3"></textarea>
+  </div>
+
+  <div class="mb-3">
+    <label for="comment" class="form-label">Comment</label>
+    <textarea class="form-control" id="comment" name="comment" rows="2"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}

@@ -1,0 +1,86 @@
+{% extends "base.html" %}
+
+{% block title %}Request to Join{% endblock %}
+
+{% block content %}
+<h3 class="text-center text-success">Request To Join</h3>
+<div id="form-alert" class="alert mt-3 d-none" role="alert"></div>
+<form id="membershipForm">
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label class="form-label">Name <span class="text-danger">(Required)</span></label>
+      <input type="text" name="name" class="form-control" required>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label class="form-label">Email <span class="text-danger">(Required)</span></label>
+      <input type="email" name="email" class="form-control" required>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Phone (e.g., (555) 555-5555) <span class="text-danger">(Required)</span></label>
+    <input type="text" name="phone" class="form-control" required>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Street Address <span class="text-danger">(Required)</span></label>
+    <input type="text" name="street_address" class="form-control" required>
+  </div>
+
+  <div class="row">
+    <div class="col-md-4 mb-3">
+      <label class="form-label">City <span class="text-danger">(Required)</span></label>
+      <input type="text" name="city" class="form-control" required>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label class="form-label">State <span class="text-danger">(Required)</span></label>
+      <input type="text" name="state" class="form-control" required>
+    </div>
+    <div class="col-md-4 mb-3">
+      <label class="form-label">Zip Code <span class="text-danger">(Required)</span></label>
+      <input type="text" name="zip_code" class="form-control" required>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 mb-3">
+      <label class="form-label">Motorcycle Make</label>
+      <input type="text" name="motorcycle_make" class="form-control" required>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label class="form-label">Motorcycle Model</label>
+      <input type="text" name="motorcycle_model" class="form-control" required>
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Military Service <span class="text-danger">(Required)</span></label>
+    <select name="military_service" class="form-select" required>
+      <option value="">Choose...</option>
+      <option value="Yes">Yes</option>
+      <option value="No">No</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Branch of Service <span class="text-danger">(Required)</span></label>
+    <select name="military_branch" class="form-select">
+      <option value="">Choose...</option>
+      <option value="Army">Army</option>
+      <option value="Navy">Navy</option>
+      <option value="Air Force">Air Force</option>
+      <option value="Marines">Marines</option>
+      <option value="Coast Guard">Coast Guard</option>
+      <option value="Space Force">Space Force</option>
+      <option value="Other">Other</option>
+    </select>
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Comment</label>
+    <textarea name="comment" class="form-control" rows="3"></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}

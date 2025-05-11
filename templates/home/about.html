@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Nam Knights | About{% endblock %}
+
+{% block content %}
+    <div>
+        <img src="{% static 'images/wreaths.jpg' %}" width="1300" height="200" alt="Descriptive alt" class="img-fluid rounded">
+    </div>
+    <div class="position-relative w-75 my-3">
+        <hr class="border-light m-0">
+        <h3 class="position-absolute top-0 end-0 translate-middle-y bg-body px-2">About</h3>
+    </div>
+    <div class="container my-3">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <img src="{% static 'images/soldier.png' %}" alt="Descriptive alt" class="img-fluid">
+            </div>
+            <div class="col-md-6 text-center">
+                <h2>About topic 1</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit laboriosam dicta, optio pariatur fuga, tempore consequuntur molestiae tenetur id doloremque error eum dignissimos fugit eveniet magni autem facere quae dolorum?</p>
+            </div>
+        </div>
+        <div class="row align-items-center">
+            <div class="col-md-6 text-center">
+                <h2>About topic 2</h2>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit laboriosam dicta, optio pariatur fuga, tempore consequuntur molestiae tenetur id doloremque error eum dignissimos fugit eveniet magni autem facere quae dolorum?</p>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'images/police.png' %}" alt="Descriptive alt" class="img-fluid">
+            </div>
+        </div>
+    </div>
+{% endblock %}

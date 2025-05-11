@@ -1,0 +1,32 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg bg-dark rounded" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand d-flex align-items-center" href="/">
+      <img src="{% static 'images/navbar.png' %}" alt="Logo" width="100" height="100" class="d-inline-block align-text-top me-2">
+      Nam Knights - Bloodstrip Chapter
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="/">Home</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle {% if request.path == '/about' or request.path == '/assistance-request/' %}active{% endif %}" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            About
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="aboutDropdown">
+            <li><a class="dropdown-item" href="/about">About</a></li>
+            <li><a class="dropdown-item" href="/join">Request Join</a></li>
+            <li><a class="dropdown-item" href="/assistance">Request Assistance</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link {% if request.path == '/store' %}active{% endif %}" href="/store">Store</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
